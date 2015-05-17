@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_showid_titlelesson"
+        android:text="课程号"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp"/>
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_queryid_titlelesson"
+        android:textSize="18sp"
+        android:numeric="integer"
+        android:singleLine="true"
+        android:layout_toRightOf="@id/tv_showid_titlelesson"
+        android:layout_marginLeft="5dp"
+        android:layout_alignBaseline="@id/tv_showid_titlelesson"
+        bootstrapbutton:be_state="primary"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_showname_titlelesson"
+        android:text="课程名"
+        android:layout_alignBaseline="@id/tv_showid_titlelesson"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/et_queryid_titlelesson"
+        android:textSize="15sp"/>
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_queryname_titlelesson"
+        android:textSize="18sp"
+        android:singleLine="true"
+        android:layout_toRightOf="@id/tv_showname_titlelesson"
+        android:layout_marginLeft="5dp"
+        android:layout_alignBaseline="@id/tv_showid_titlelesson"
+        bootstrapbutton:be_state="primary"/>
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_query_titlelesson"
+        android:layout_toRightOf="@id/et_queryname_titlelesson"
+        android:text="查询"
+        android:textSize = "8sp"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="15dp"
+        bootstrapbutton:bb_type="primary"
+        bootstrapbutton:bb_icon_left="fa-search"
+        bootstrapbutton:bb_size="small"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear_im_lesson"
+            android:layout_alignParentBottom="true">
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:id="@+id/bbtn_addlesson_lesson"
+                android:text="添加课程"
+                android:gravity ="center"
+                android:layout_weight="1"
+                bootstrapbutton:bb_icon_right="fa-plus"
+                />
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:id="@+id/bbtn_querylesson_lesson"
+                android:text="查询课程"
+                android:gravity ="center"
+                android:layout_weight="1"
+                bootstrapbutton:bb_icon_right="fa-search"
+                />
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:id="@+id/bbtn_gradeinfo_lesson"
+                android:text="教学成绩"
+                android:gravity ="center"
+                android:layout_weight="1"
+                bootstrapbutton:bb_icon_right="fa-sort-amount-desc"/>
+        </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/framelayout_lesson"
+        android:layout_below="@id/tv_showid_titlelesson"
+        android:layout_marginTop="20dp"
+        android:layout_above="@id/linear_im_lesson"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,252 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:bootstrapthumbnail="http://schemas.android.com/apk/res-auto"
+    xmlns:fontawesometext="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_date"
+        android:text="今天是2015年5月7日星期三"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_showloginnumber"
+        android:text="累计登陆"
+        android:layout_toRightOf="@id/tv_date"
+        android:layout_alignBottom="@id/tv_date"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_loginnumber"
+        android:layout_toRightOf="@id/tv_showloginnumber"
+        android:layout_alignBottom="@id/tv_showloginnumber"
+        android:layout_marginLeft="5dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_showlogintime"
+        android:text="上次登陆"
+        android:layout_below="@id/tv_loginnumber"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_logintime"
+        android:textStyle="italic"
+        android:layout_toRightOf="@id/tv_showlogintime"
+        android:layout_alignBottom="@id/tv_showlogintime"
+        android:layout_marginLeft="20dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_week_number"
+        android:textStyle="italic"
+        android:layout_toRightOf="@id/tv_loginnumber"
+        android:layout_alignBottom="@id/tv_loginnumber"
+        android:layout_marginLeft="20dp"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bbtn_exit"
+        android:text="退出"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        bootstrapbutton:bb_icon_right="fa-sign-out"
+        bootstrapbutton:bb_type="success"
+        bootstrapbutton:bb_roundedCorners="true"
+        bootstrapbutton:bb_size="small"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_below="@id/tv_date"
+        android:layout_marginTop="25dp">
+        <com.beardedhen.androidbootstrap.FontAwesomeText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/at_user"
+            android:textColor="@color/bbutton_danger"
+            android:textSize="32sp"
+            android:textStyle="italic"
+            fontawesometext:fa_icon="fa-user"/>
+        <com.beardedhen.androidbootstrap.FontAwesomeText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bbutton_info"
+            android:textSize="32sp"
+            android:textStyle="italic"
+            android:layout_marginLeft="15dp"
+            fontawesometext:fa_icon="fa-info-circle"/>
+        <com.beardedhen.androidbootstrap.FontAwesomeText
+            android:id="@+id/at_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:layout_toRightOf="@id/at_user"
+            android:layout_alignBaseline="@id/at_user"
+            android:layout_marginLeft="80dp"
+            fontawesometext:fa_icon="fa-clock-o"
+            android:textColor="@color/bbutton_warning"/>
+        <com.beardedhen.androidbootstrap.FontAwesomeText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:layout_toRightOf="@id/at_user"
+            android:layout_alignBaseline="@id/at_user"
+            android:layout_marginLeft="15dp"
+            fontawesometext:fa_icon="fa-github-square"/>
+        <com.beardedhen.androidbootstrap.FontAwesomeText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:layout_toRightOf="@id/at_user"
+            android:layout_alignBaseline="@id/at_user"
+            android:layout_marginLeft="15dp"
+            fontawesometext:fa_icon="fa-google"
+            android:textColor="@color/bbutton_info"/>
+        <com.beardedhen.androidbootstrap.FontAwesomeText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:id="@+id/at_trash"
+            android:layout_toRightOf="@id/at_user"
+            android:layout_alignBaseline="@id/at_user"
+            android:layout_marginLeft="15dp"
+            fontawesometext:fa_icon="fa-trash-o"
+            android:textColor="@color/bbutton_inverse"/>
+        <com.beardedhen.androidbootstrap.FontAwesomeText
+            android:id="@+id/at_cog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:layout_toRightOf="@id/at_trash"
+            android:layout_alignBaseline="@id/at_trash"
+            android:layout_marginLeft="15dp"
+            fontawesometext:fa_icon="fa-cog"
+            android:textColor="@color/bbutton_primary"/>
+
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_title1_main"
+        android:text="教学通知"
+        android:layout_below="@id/linearLayout"
+        android:layout_alignLeft="@id/linearLayout"
+        android:layout_marginTop="10dp"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sv_show_main"
+        android:layout_below="@id/tv_title1_main"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.beardedhen.androidbootstrap.BootstrapThumbnail
+                android:id="@+id/tb_lesson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                bootstrapthumbnail:bt_width="400dp"
+                bootstrapthumbnail:bt_height="200dp"
+                bootstrapthumbnail:bt_image="@drawable/lesson"/>
+
+            <com.beardedhen.androidbootstrap.BootstrapThumbnail
+                android:id="@+id/tb_student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                bootstrapthumbnail:bt_width="400dp"
+                bootstrapthumbnail:bt_height="200dp"
+                bootstrapthumbnail:bt_image="@drawable/student"/>
+
+            <com.beardedhen.androidbootstrap.BootstrapThumbnail
+                android:id="@+id/tb_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                bootstrapthumbnail:bt_width="400dp"
+                bootstrapthumbnail:bt_height="200dp"
+                bootstrapthumbnail:bt_image="@drawable/grade"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_title2_main"
+        android:text="数据管理"
+        android:layout_below="@id/sv_show_main"
+        android:layout_alignLeft="@id/sv_show_main"
+        android:layout_marginTop="10dp"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/bbtn_web"
+        android:text="学院"
+        android:layout_below="@id/tv_title2_main"
+        android:layout_marginTop="10dp"
+        bootstrapbutton:bb_icon_right="fa-institution"
+        bootstrapbutton:bb_type="link"
+        bootstrapbutton:bb_roundedCorners="true"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/bbtn_student_main"
+        android:layout_below="@id/bbtn_web"
+        android:text="学生管理"
+        android:layout_marginTop="5dp"
+        bootstrapbutton:bb_icon_right="fa-user"
+        bootstrapbutton:bb_roundedCorners="true"
+        bootstrapbutton:bb_type="warning"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/bbtn_lesson_main"
+        android:layout_below="@id/bbtn_student_main"
+        android:text="课程管理"
+        android:layout_marginTop="5dp"
+        bootstrapbutton:bb_icon_right="fa-th-list"
+        bootstrapbutton:bb_roundedCorners="true"
+        bootstrapbutton:bb_type="info"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/bbtn_grade_main"
+        android:layout_below="@id/bbtn_lesson_main"
+        android:text="成绩管理"
+        android:layout_marginTop="5dp"
+        bootstrapbutton:bb_icon_right="fa-trophy"
+        bootstrapbutton:bb_roundedCorners="true"
+        bootstrapbutton:bb_type="inverse"/>
+
+
+
+
+
+</RelativeLayout>

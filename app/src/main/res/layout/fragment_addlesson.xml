@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_title_addlesfrg"
+        android:text="添加课程"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_showid_addlesfrg"
+        android:text="课程号"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"/>
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_addid_addlesfrg"
+        android:textSize="20sp"
+        android:numeric="integer"
+        android:singleLine="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@id/tv_showid_addlesfrg"
+        android:layout_alignBaseline="@id/tv_showid_addlesfrg"
+        bootstrapbutton:be_roundedCorners="true"
+        bootstrapbutton:be_state="success"/>
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_showname_addlesfrg"
+        android:text="课程名"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/tv_showid_addlesfrg"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_addname_addlesfrg"
+        android:layout_below="@id/et_addid_addlesfrg"
+        android:textSize="20sp"
+        android:singleLine="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@id/tv_showname_addlesfrg"
+        android:layout_alignBaseline="@id/tv_showname_addlesfrg"
+        bootstrapbutton:be_roundedCorners="true"
+        bootstrapbutton:be_state="success"/>
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_showcredit_addlesfrg"
+        android:text="学 分"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/tv_showname_addlesfrg"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_addcredit_addlesfrg"
+        android:layout_below="@id/et_addname_addlesfrg"
+        android:textSize="20sp"
+        android:singleLine="true"
+        android:gravity="center_horizontal"
+        android:numeric="integer"
+        android:layout_marginTop="60dp"
+        android:layout_toRightOf="@id/tv_showcredit_addlesfrg"
+        android:layout_alignBaseline="@id/tv_showcredit_addlesfrg"
+        bootstrapbutton:be_roundedCorners="true"
+        bootstrapbutton:be_state="success"/>
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_addlesfrg"
+        android:text="确认"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_showcredit_addlesfrg"
+        android:layout_marginTop="80dp"
+        android:layout_alignRight="@id/et_addcredit_addlesfrg"
+        android:layout_alignLeft="@id/tv_showcredit_addlesfrg"
+        bootstrapbutton:bb_type="primary"
+        bootstrapbutton:bb_roundedCorners="true"/>
+
+</RelativeLayout>

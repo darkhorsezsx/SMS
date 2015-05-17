@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.zsx.sms" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher2"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".app.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.LoginActivity"
+            android:launchMode="singleInstance"></activity>
+
+        <activity android:name=".app.LessonActivity"
+            ></activity>
+
+        <activity android:name=".app.StudentActivity"
+            android:windowSoftInputMode="adjustNothing"></activity>
+
+        <activity android:name=".app.GradeActivity"></activity>
+
+    </application>
+
+</manifest>
